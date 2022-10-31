@@ -7,7 +7,7 @@ import wave
 chunk = 1024  
 
 #open a wav format music  
-# f = wave.open(r"./samples/44.1kHz_sample.wav","rb")  
+#f = wave.open(r"./samples/44.1kHz_sample.wav","rb")  
 # f = wave.open(r"./samples/8kHz_sample.wav","rb")  
 f = wave.open(r"./samples/8kHz_sample.wav","rb")  
 #instantiate PyAudio  

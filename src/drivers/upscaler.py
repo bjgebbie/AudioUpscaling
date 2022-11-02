@@ -5,3 +5,4 @@ class upscaler:
 
         if interpolation == 'cs':
             # run cubic spline and write to a file
+            pass

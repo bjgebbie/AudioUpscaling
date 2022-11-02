@@ -1,15 +1,15 @@
+from sys import argv
+import sys
 import pyaudio
 import wave
-
+import sys
 
 
 #define stream chunk   
 chunk = 1024  
 
 #open a wav format music  
-#f = wave.open(r"./samples/44.1kHz_sample.wav","rb")  
-# f = wave.open(r"./samples/8kHz_sample.wav","rb")  
-f = wave.open(r"./samples/8kHz_sample.wav","rb")  
+f = wave.open(r"./samples/"+sys.argv[1],"rb")  
 #instantiate PyAudio  
 p = pyaudio.PyAudio()  
 #open stream  

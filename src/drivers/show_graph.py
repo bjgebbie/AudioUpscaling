@@ -5,6 +5,7 @@ import numpy as np
 # read audio samples
 input_data = read("./samples/8kHz_sample.wav")
 data = input_data[1]
+print(input_data[1])
 # plot the sound wawve
 # for x in range(len(audio)-80000):
 #     plt.plot(x, audio[x][0],marker="o", markersize=2)

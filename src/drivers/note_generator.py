@@ -3,15 +3,16 @@ from scipy.io.wavfile import write
 samplerate = 44000
 data = np.array([0,0])
 
-x = 2000
+#IMPORTANT: sample rate must be higher than the note and divide it evenly
+note = 200
 
-s = np.sin(range(x))
+s = np.sin(range(note))
 
 c = 0
 j = 0
 l = []
 for i in range(samplerate):
-    if c >= (samplerate/x):
+    if c >= (samplerate/note):
         c = 0
         j = j + 1
     l.append(s[j])
@@ -21,4 +22,4 @@ for i in range(samplerate):
     t = [(l[i]*8000), 0]
     data = np.vstack([data, t])
 
-write("samples/rising.wav", samplerate, data.astype(np.int16))
+write("samples/note.wav", samplerate, data.astype(np.int16))

@@ -19,7 +19,7 @@ for i in range(samplerate):
     c = c + 1
     
 for i in range(samplerate): 
-    t = [(l[i]*8000), 0]
+    t = [(l[i]*8000), (l[i]*8000)]
     data = np.vstack([data, t])
 
 write("samples/note.wav", samplerate, data.astype(np.int16))

@@ -4,7 +4,7 @@ samplerate = 44000
 data = np.array([0,0])
 
 #IMPORTANT: sample rate must be higher than the note and divide it evenly
-note = 200
+note = 2000
 
 s = np.sin(range(note))
 

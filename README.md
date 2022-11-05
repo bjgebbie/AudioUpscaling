@@ -6,6 +6,7 @@ This repo is for a Numerical Analysis project
 
 - Make sure you have completed the requirements section below
 - To show and listen to the sample type `py ./src/drivers/show_graph.py {SAMPLE_NAME}`
+- To run the upscaler type `py ./src/upscale {SAMPLE_NAME}` and it will generate an upscaled file in samples for you to calle the show graph on.
 
 ## Requirements
 

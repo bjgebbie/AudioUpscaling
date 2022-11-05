@@ -1,6 +1,6 @@
 import numpy as np
 from scipy.io.wavfile import write
-samplerate = 44000
+samplerate = 8000
 data = np.array([0,0])
 
 #IMPORTANT: sample rate must be higher than the note and divide it evenly

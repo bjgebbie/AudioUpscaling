@@ -1,8 +1,10 @@
 import threading
 from scipy.io.wavfile import read
+from scipy.interpolate import make_interp_spline
 import matplotlib.pyplot as plt
 import sys
 import play_sound as ps
+import numpy as np
 
 wav_file = "./samples/"+sys.argv[1]
 
@@ -10,8 +12,15 @@ wav_file = "./samples/"+sys.argv[1]
 input_data = read(wav_file)
 # Getting amplitude data
 data = input_data[1]
+x = range(len(data[:, 0]))
+y = data[:, 0]
+x = np.asanyarray(x)
 
-plt.plot(data[:, 0], label="Left channel")
+smooth = make_interp_spline(x, y)
+
+xa = np.linspace(x.min(), x.max(), len(x)*25)
+ya = smooth(xa)
+plt.plot(xa, ya, label="Left channel")
 
 plt.ylabel("Amplitude")
 plt.xlabel("x")

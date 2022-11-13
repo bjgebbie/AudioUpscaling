@@ -6,7 +6,7 @@ data = np.array([[1000,1],[-1000,1],[1000,1]])
 print(data)
 
 b = False
-for i in range(16000):
+for i in range(30000):
     if b:
         t = [-i, 0]
     else:

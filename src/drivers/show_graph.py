@@ -18,7 +18,7 @@ x = np.asanyarray(x)
 
 smooth = make_interp_spline(x, y)
 
-xa = np.linspace(x.min(), x.max(), len(x)*25)
+xa = np.linspace(x.min(), x.max(), len(x)*1)
 ya = smooth(xa)
 plt.plot(xa, ya, label="Left channel")
 
